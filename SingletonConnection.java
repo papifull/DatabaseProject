@@ -9,7 +9,7 @@ public class SingletonConnection {
 	private static String password ="";
 	private static Connection connection;
 	static {
-		
+
 		try {//on verifie si la connexion � la bd est bien �tablie
 			Class.forName ("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url, user, password);
@@ -25,7 +25,17 @@ public class SingletonConnection {
 		return connection;
 	}
 	
-	
+	public String getURL(){
+		return this.url;
+	}
+	public String getUser()
+	{
+		return this.user;
+	}
+	public String getPassword()
+	{
+		return this.password;
+	}
 	
 
 }
