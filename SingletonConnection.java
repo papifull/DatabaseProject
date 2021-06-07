@@ -9,16 +9,17 @@ public class SingletonConnection {
 	private static String password ="";
 	private static Connection connection;
 	static {
-		try {//on verifie si la connexion à la bd est bien établie
+		
+		try {//on verifie si la connexion ï¿½ la bd est bien ï¿½tablie
 			Class.forName ("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(url, user, password);
-			//System.out.println("Connexion à la base de données réussie");
+			//System.out.println("Connexion ï¿½ la base de donnï¿½es rï¿½ussie");
 		} catch (Exception e) {
 			e.printStackTrace();
 			//System.out.println("Erreur lors de la connexion");
 		    System.exit(0);
 		}
-		System.out.println("Connexion établie.");
+		System.out.println("Connexion ï¿½tablie.");
 	}
 	public static Connection getConnexion() {
 		return connection;
