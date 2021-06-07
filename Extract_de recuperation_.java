@@ -1,4 +1,4 @@
-public class Extract {
+public class Extract_de recuperation_{
 public static void extractFromPDF(String pdfPath, String fichierMensuel, boolean JSONOrXML, String date,
 			String dateExt, JLabel pb, JButton owner) throws Exception {
 		PDDocument document = null;
