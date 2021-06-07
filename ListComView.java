@@ -4,9 +4,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
-
-import pojo.Fichier;
-
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -19,34 +16,29 @@ import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.File;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 
 public class ListComView {
 
 	private JFrame frame;
-	private static ArrayList<String> addedCom;
+	//private static ArrayList<String> addedCom;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		if(args.length ==1) {
-			String path = args[1];
-			File file = new File(path);
-			Fichier fic = new Fichier("juin", file);
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						ListComView window = new ListComView();
-						window.frame.setVisible(true);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ListComView window = new ListComView();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-			});
-		}
+			}
+		});
 	}
 
 	/**
@@ -80,7 +72,7 @@ public class ListComView {
 		});
 		chckbxNewCheckBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addedCom.add("01/06/2021");
+				//addedCom.add("01/06/2021");
 				
 			}
 		});
@@ -90,7 +82,7 @@ public class ListComView {
 		JCheckBox chckbxNewCheckBox_1 = new JCheckBox("02/06/2021");
 		chckbxNewCheckBox_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addedCom.add("02/06/2021");
+				//addedCom.add("02/06/2021");
 			}
 		});
 		chckbxNewCheckBox_1.setBounds(43, 60, 97, 23);
@@ -117,7 +109,7 @@ public class ListComView {
 		JCheckBox chckbxNewCheckBox_4 = new JCheckBox("05/06/2021");
 		chckbxNewCheckBox_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addedCom.add("05/06/2021");
+				//addedCom.add("05/06/2021");
 			}
 		});
 		chckbxNewCheckBox_4.setBounds(43, 120, 97, 23);
@@ -131,7 +123,7 @@ public class ListComView {
 		});*/
 		chckbxNewCheckBox_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addedCom.add("05/06/2021");
+				//addedCom.add("05/06/2021");
 			}
 		});
 		chckbxNewCheckBox_5.setBounds(43, 140, 97, 23);
@@ -140,8 +132,8 @@ public class ListComView {
 		JButton btnNewButton = new JButton("Ajouter");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ArrayList<String> checkedcom = ListComView.getAddedCom();
-				JOptionPane.showMessageDialog(btnNewButton, "Les communiqués des dates sélectionnées ont été ajoutés à la base de données");
+				//ArrayList<String> checkedcom = ListComView.getAddedCom();
+				JOptionPane.showMessageDialog(btnNewButton, "Les communiquÃ©s des dates sÃ©lectionnÃ©es ont Ã©tÃ© ajoutÃ©s Ã  la base de donnÃ©es");
 				System.out.println("");
 				//return checkedcom;
 				
@@ -154,11 +146,12 @@ public class ListComView {
 		frame.getContentPane().add(btnNewButton);
 	}
 
-	public static ArrayList<String> getAddedCom() {
+	/*public static ArrayList<String> getAddedCom() {
 		return addedCom;
 	}
 
 	public void setAddedCom(ArrayList<String> addedCom) {
 		this.addedCom = addedCom;
-	}
+	}*/
 }
+
