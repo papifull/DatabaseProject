@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
         import org.jsoup.nodes.Element;
         import org.jsoup.select.Elements;
 
-public class WebScrapper {
+public class WebScapper {
     private  String jour;
     private  String mois;
     private  String annee;
@@ -141,9 +141,9 @@ public class WebScrapper {
         return  l;
     }
     public static void main(String[] args) {
-        WebScrapper ws = new WebScrapper();
-        String test =  WebScrapper.Scrap();
-        System.out.println(test);
+        WebScapper ws = new WebScapper();
+
+      //  System.out.println(test);
     }
 }
 
